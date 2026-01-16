@@ -1,0 +1,23 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[[env]]
+name = "DISCORD_TOKEN"
+description = "Your Discord bot token from discord.com/developers"
+required = true
+
+[[env]]
+name = "USERNAME"
+description = "Your Ethone account username (create account first at app.ethone.cc)"
+required = true
+
+[[env]]
+name = "PASSWORD"
+description = "Your Ethone account password"
+required = true
+
