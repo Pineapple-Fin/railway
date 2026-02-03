@@ -1,10 +1,16 @@
 [build]
 builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile"
+builder = "paketobuildpacks/builder:base"
 
 [deploy]
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
+
+[vm]
+cpu_kind = "shared"
+cpus = 1
+memory = "256mb"
 
 [[env]]
 name = "DISCORD_TOKEN"
